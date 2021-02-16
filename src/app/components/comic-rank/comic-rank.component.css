@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-left: 30%;
+}
+
+.row {
+  width: 50%;
+  text-align: center;
+}
+
+.ec-stars-wrapper {
+  font-size: 0;
+  margin-top:20px;
+  display: inline-block;
+}
+
+.ec-stars-wrapper a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+  font-size: 3rem;
+
+  color: #dedede;
+}
+
+
+
+.ec-stars-wrapper:hover a {
+  color: #FFC803;
+
+}
+.fa-star{text-shadow: 2px 7px 6px rgba(0, 0, 0, 0.25)}
+
+.ec-stars-wrapper>a:hover~a {
+  color: #dedede;
+}
+
+.title {
+  font-family: Reenie Beanie;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 80px;
+  color: #1E0051;
+}
+
+.contain-image {
+  width: 94%;
+  height: 100%;
+  background: #fff;
+
+  /* Box Purple */
+  border: 12px solid #9d64e0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 8px 18px 36px rgba(0, 0, 0, 0.25);
+  border-radius: 13px;
+}
+
+.img-responsive {
+  height: 100%;
+  width: 100%;
+}
