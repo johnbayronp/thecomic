@@ -1,1 +1,1 @@
-# thecomic
+# The Comic
