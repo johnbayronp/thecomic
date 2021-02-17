@@ -1,0 +1,54 @@
+#nube {
+  width: 150px;
+}
+
+#Group1 {
+  animation: nube 1s ease-in-out infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes nube {
+  from {
+    transform: rotateX(0px);
+    left: 10px;
+  }
+
+  to {
+    transform: rotateX(20deg);
+    lef: 200px;
+  }
+}
+
+/*Responsive*/
+
+/*Responsive*/
+@media only screen and (max-width: 2560px) {
+
+    #nube{
+        width:200px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    #nube{
+        width:100px;
+    }
+}
+
+@media only screen and (max-width:425px) {
+
+    #nube{
+        width:70px;
+    }
+}
+
+
+
+@media only screen and (max-width:320px) {
+
+    #nube{
+        width:50px;
+    }
+}

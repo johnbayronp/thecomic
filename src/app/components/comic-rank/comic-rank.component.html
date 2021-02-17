@@ -1,33 +1,32 @@
-<div class="container">
+<div class="container" *ngIf="loading">
 
   <div class="row">
     <div class="header">
-      <h2 class="title">THE COMIC RANK</h2>
+      <h2 class="title">{{comic.title}}</h2>
     </div>
   </div>
 
   <div class="row">
 
     <div class="contain-image">
-      <img alt="img-comic" src="https://imgs.xkcd.com/comics/fight.png"
-        class="img-responsive">
+      <img alt="img-comic" src="{{comic.img}}" class="img-responsive">
     </div>
   </div>
   <div class="row">
     <div class="ec-stars-wrapper">
-      <a href="#" data-value="1" title="Votar con 1 estrellas">
+      <a href="#" data-value="1" title="Votar con 1 estrellas" (click)="getComic()">
         <i class="fas fa-star"></i>
       </a>
-      <a href="#" data-value="2" title="Votar con 2 estrellas">
+      <a href="#" data-value="2" title="Votar con 2 estrellas" (click)="getComic()">
         <i class="fas fa-star"></i>
       </a>
-      <a href="#" data-value="3" title="Votar con 3 estrellas">
+      <a href="#" data-value="3" title="Votar con 3 estrellas" (click)="getComic()">
         <i class="fas fa-star"></i>
       </a>
-      <a href="#" data-value="4" title="Votar con 4 estrellas">
+      <a href="#" data-value="4" title="Votar con 4 estrellas" (click)="getComic()">
         <i class="fas fa-star"></i>
       </a>
-      <a href="#" data-value="5" title="Votar con 5 estrellas">
+      <a href="#" data-value="5" title="Votar con 5 estrellas" (click)="getComic()">
         <i class="fas fa-star"></i>
       </a>
     </div>
@@ -35,3 +34,14 @@
 
 </div>
 
+<div class="nubes-box" *ngIf="!loading">
+  <div class="nubes1">
+    <app-spinner></app-spinner>
+  </div>
+  <div class="nubes2">
+    <app-spinner></app-spinner>
+  </div>
+  <div class="nubes3">
+    <app-spinner></app-spinner>
+  </div>
+</div>

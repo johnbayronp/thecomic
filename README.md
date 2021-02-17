@@ -10,6 +10,10 @@ Correr `ng serve` para lanzar el servidor. Navegar a `http://localhost:4200/`.
 ## Web - Deploy
 
 Ingresar al link: 
-  `ww...`
+  `https://thecomicux.netlify.app/`
 
 
+## Problems 
+  Algunos problemas con los cors de la api sugerida
+    'https://xkcd.com/614/info.0.json'
+    

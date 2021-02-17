@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ComicRankComponent } from './components/comic-rank/comic-rank.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ComicApiService } from './services/comic-api.service';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 
 
@@ -15,7 +16,8 @@ import { ComicApiService } from './services/comic-api.service';
   declarations: [
     AppComponent,
     ComicRankComponent,
-    FooterComponent
+    FooterComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

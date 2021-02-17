@@ -1,17 +1,25 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Comic } from '../interfaces/comic';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ComicApiService {
 
-  constructor(private http: HttpClient) { }
-  url: string;
-  random: number;
+  private api = 'https://xkcd.now.sh/?comic';
 
-  getComic(random):Observable<any>{
-    return this.http.get<any>('https://xkcd.com/614/info.0.json');
+  constructor(private http: HttpClient ) { }
+
+  getComic(id):Observable<Comic>{
+ 
+    const header= new HttpHeaders()
+    .append('Access-Control-Allow-Origin','*')
+    .append('Access-Control-Allow-Methods', 'GET')
+    .append('Access-Control-Allow-Headers','*')
+    .append('cache-control','no-cache')
+
+    return this.http.get<Comic>(`${this.api}=${id}`,{'headers':header});
   }
 }

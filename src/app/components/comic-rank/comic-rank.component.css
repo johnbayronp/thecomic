@@ -10,9 +10,68 @@
   text-align: center;
 }
 
+.nubes-box {
+  flex: 1;
+  margin-top:10%;
+  margin-left:40%;
+}
+.nubes1 {
+  position: relative;
+  width: 2%;
+  margin-left: 10%;
+  animation: move1 20s cubic-bezier(0.39, 0.58, 0.57, 1) infinite
+}
+.nubes2 {
+  position: relative;
+  width: 3%;
+  margin-left: 8%;
+  animation:move2 20s cubic-bezier(0.39, 0.58, 0.57, 1) infinite
+}
+.nubes3 {
+  position: relative;
+  width: 4%;
+  margin-left: -8%;
+  animation:move1 20s cubic-bezier(0.39, 0.58, 0.57, 1) infinite
+}
+
+@keyframes move1 {
+
+  0%{
+    left:-10%;
+  }
+  50%{
+    left:15%;
+  }
+  100%{
+    left:-10%
+  }
+}
+
+
+@keyframes move2 {
+
+  0%{
+    right:10%;
+  }
+  50%{
+    right:15%;
+  }
+  100%{
+    right:10%
+  }
+}
+.box-center {
+  display: flex;
+
+  align-content: center;
+  margin-top: 10%;
+  background-color: red;
+}
+
+
 .ec-stars-wrapper {
   font-size: 0;
-  margin-top:20px;
+  margin-top: 20px;
   display: inline-block;
 }
 
@@ -31,7 +90,10 @@
   color: #FFC803;
 
 }
-.fa-star{text-shadow: 2px 7px 6px rgba(0, 0, 0, 0.25)}
+
+.fa-star {
+  text-shadow: 2px 7px 6px rgba(0, 0, 0, 0.25)
+}
 
 .ec-stars-wrapper>a:hover~a {
   color: #dedede;
@@ -60,4 +122,84 @@
 .img-responsive {
   height: 100%;
   width: 100%;
+}
+
+
+/*Responsive*/
+@media only screen and (max-width: 2560px) {
+
+  .ec-stars-wrapper a {
+    font-size: 90px;
+  }
+
+  .title{
+    font-size:8rem;
+    line-height:8px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+
+  .ec-stars-wrapper a {
+    font-size: 55px;
+  }
+
+  .title{
+    font-size:8rem;
+    line-height:8px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .ec-stars-wrapper a {
+    font-size: 40px;
+  }
+
+  .title{
+    font-size:6rem;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .ec-stars-wrapper a {
+    font-size: 35px;
+  }
+
+  .container{
+    margin-left:10%;
+  }
+
+  .row {
+    width: 90%;
+  }
+
+  .title{
+    font-size:4rem;
+  }
+}
+
+@media only screen and (max-width:425px){
+  .contain-image{
+    border:6px solid #9d64e0;
+  }
+  .image-responsive{
+    border-radius: 5px;
+  }
+}
+
+
+
+@media only screen and (max-width:320px){
+
+  .ec-stars-wrapper a {
+    font-size: 25px;
+  }
+
+  .nubes-box{
+    margin-top: -10%;
+  }
+
 }
