@@ -159,6 +159,14 @@
   .title{
     font-size:6rem;
   }
+
+  .container{
+    margin-left: 18%;
+  }
+
+  .row{
+    width:85%;
+  }
 }
 
 

@@ -35,20 +35,37 @@
 @media only screen and (max-width: 1024px) {
 
   .row {
-    margin-top: 10%;
+    margin-top: 38%;
   }
 }
 
 @media only screen and (max-width: 768px) {
 
-  .info-text{
-      font-size:2rem;
+  .info-text {
+    font-size: 2rem;
+  }
+
+  .row {
+    margin-top: 57%;
   }
 }
 
 
-@media only screen and (max-width:320px){
+
+@media only screen and (max-width:425px) {
+  .row {
+    margin-top: 150%;
+  }
+}
+
+
+
+@media only screen and (max-width:375px) {
   .info-text {
-      font-size:1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .row {
+    margin-top: 250%;
   }
 }
