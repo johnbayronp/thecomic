@@ -1,4 +1,4 @@
-<div class="container" *ngIf="loading">
+<div class="container" *ngIf="!loading">
 
   <div class="row">
     <div class="header">
@@ -34,7 +34,7 @@
 
 </div>
 
-<div class="nubes-box" *ngIf="!loading">
+<div class="nubes-box" *ngIf="loading">
   <div class="nubes1">
     <app-spinner></app-spinner>
   </div>
