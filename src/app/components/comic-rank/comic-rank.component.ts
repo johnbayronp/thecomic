@@ -1,5 +1,4 @@
 import { Component, OnChanges, OnInit } from '@angular/core';
-import { Comic } from 'src/app/interfaces/comic';
 import { ComicApiService } from 'src/app/services/comic-api.service';
 
 @Component({
@@ -10,22 +9,35 @@ import { ComicApiService } from 'src/app/services/comic-api.service';
 export class ComicRankComponent implements OnInit {
 
   constructor(private comicService: ComicApiService) { }
-  loading: boolean = true;
+  loading: boolean = false;
+  notFound: boolean = false;
   comic: any;
 
   ngOnInit() {
-    this.getComic();
     
+    this.loading = true;
     setTimeout(() =>{
-      this.loading = false;
+      this.getComic();
     },1000);
     
   }
 
   getComic(){
+
+    this.loading = true;
     let idRand = Math.floor(Math.random()*(1000-0)) + 0;
     this.comicService.getComic(idRand)
-      .subscribe(res => this.comic = res);
+      .subscribe(
+        res => {
+          this.comic = res; 
+          this.loading = false; 
+          this.notFound = false
+        },
+        err => {
+          this.notFound = true;
+          this.loading = false;
+        }  
+      );
   } 
 
 }

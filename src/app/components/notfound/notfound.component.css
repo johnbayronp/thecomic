@@ -1,0 +1,66 @@
+.box {
+  margin-top: 30%;
+}
+
+#notfound {
+  width: 800px;
+  height: 600px;
+  animation: salto 2s ease-in-out infinite alternate;
+}
+#bomba {
+  animation: salto 1.5s ease-in-out infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes salto {
+  from {
+    transform: rotateX(0px);
+  }
+
+  to {
+    transform: rotateX(10deg);
+  }
+}
+
+/*Responsive*/
+@media only screen and (max-width: 768px) {
+
+  #notfound {
+
+    width: 600px;
+    height: 500px;
+
+  }
+}
+
+
+
+@media only screen and (max-width: 1440px) {
+
+  #notfound {
+
+    width: 400px;
+    height: 300px;
+
+  }
+}
+
+
+@media only screen and (max-width:425px) {
+
+    #notfound{
+        width:374px;
+    }
+}
+
+@media only screen and (max-width:320px) {
+
+    #notfound{
+        width:200px;
+    }
+    .box {
+        margin-top: 0%;
+      }
+      
+}

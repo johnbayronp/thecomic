@@ -9,6 +9,7 @@ import { ComicRankComponent } from './components/comic-rank/comic-rank.component
 import { FooterComponent } from './components/footer/footer.component';
 import { ComicApiService } from './services/comic-api.service';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 
 
@@ -17,7 +18,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     AppComponent,
     ComicRankComponent,
     FooterComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,

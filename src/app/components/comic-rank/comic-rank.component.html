@@ -1,37 +1,40 @@
-<div class="container" *ngIf="!loading">
-
-  <div class="row">
-    <div class="header">
-      <h2 class="title">{{comic.title}}</h2>
-    </div>
+<div class="container" >
+  <div class="row" *ngIf="notFound">
+    <app-notfound></app-notfound>
   </div>
 
-  <div class="row">
+  <div *ngIf="!loading && !notFound">
+    <div class="row">
+      <div class="header">
+        <h2 class="title" *ngIf="comic.title">{{comic.title}}</h2>
+      </div>
+    </div>
 
-    <div class="contain-image">
-      <img alt="img-comic" src="{{comic.img}}" class="img-responsive">
+    <div class="row">
+      <div class="contain-image">
+        <img alt="img-comic" src="{{comic.img}}" class="img-responsive" *ngIf="comic.img">
+      </div>
+    </div>
+    <div class="row">
+      <div class="ec-stars-wrapper">
+        <a href="#" data-value="1" title="Votar con 1 estrellas" (click)="getComic()">
+          <i class="fas fa-star"></i>
+        </a>
+        <a href="#" data-value="2" title="Votar con 2 estrellas" (click)="getComic()">
+          <i class="fas fa-star"></i>
+        </a>
+        <a href="#" data-value="3" title="Votar con 3 estrellas" (click)="getComic()">
+          <i class="fas fa-star"></i>
+        </a>
+        <a href="#" data-value="4" title="Votar con 4 estrellas" (click)="getComic()">
+          <i class="fas fa-star"></i>
+        </a>
+        <a href="#" data-value="5" title="Votar con 5 estrellas" (click)="getComic()">
+          <i class="fas fa-star"></i>
+        </a>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="ec-stars-wrapper">
-      <a href="#" data-value="1" title="Votar con 1 estrellas" (click)="getComic()">
-        <i class="fas fa-star"></i>
-      </a>
-      <a href="#" data-value="2" title="Votar con 2 estrellas" (click)="getComic()">
-        <i class="fas fa-star"></i>
-      </a>
-      <a href="#" data-value="3" title="Votar con 3 estrellas" (click)="getComic()">
-        <i class="fas fa-star"></i>
-      </a>
-      <a href="#" data-value="4" title="Votar con 4 estrellas" (click)="getComic()">
-        <i class="fas fa-star"></i>
-      </a>
-      <a href="#" data-value="5" title="Votar con 5 estrellas" (click)="getComic()">
-        <i class="fas fa-star"></i>
-      </a>
-    </div>
-  </div>
-
 </div>
 
 <div class="nubes-box" *ngIf="loading">
